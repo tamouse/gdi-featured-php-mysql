@@ -233,7 +233,7 @@
                 <pre><code>
 &lt;?php
     $numberOfKittens = 5;
-    $kittensPerPuppy = 1.25;
+    $cutenessRating = 9.6;
 ?&gt;
 				</code></pre>
                 <p>PHP will automatically convert integers to floats if needed</p>
@@ -343,9 +343,106 @@
 			</section>
         </section>
         <!-- Functions -->
-        <section>
-        
+        <section id="functions">
+            <section>
+                <h3>Functions</h3>
+                <p>Functions are separable, reusable pieces of code. 
+                <img src="images/legos.jpg" alt="Pile of legos"/>
+				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/catzrule/9940388305/">Rick Payette</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
+            </section>
+            <section>
+                <h3>Using Functions</h3>
+                <p>First, declare the function.</p>
+                <pre><code>
+&lt;?php
+    function turtleFact() {
+        echo 'A turtle\'s lower shell is called plastron.';
+    }
+?&gt;
+				</code></pre>
+                <p>Then, use it as many times as you want!</p>
+                <pre><code>
+&lt;?php
+    turtleFact();
+?&gt;
+				</code></pre>                
+            </section>
+            <section>
+                <h3>Arguments</h3>
+                <p>Functions can accept input values, called arguments.</p>
+                <pre><code>
+&lt;?php
+    function callKitten ($kittenName){
+        echo 'Come here, ' . $kittenName . '!';
+    }
+    callKitten ('Fluffy'); //outputs 'Come here, Fluffy!'
+    
+    function addNumbers($a, $b) {
+        echo $a + $b;
+    }
+    addNumbers(5,7); //outputs 12
+    addNumbers(9,12); //outputs 21
+?&gt;
+				</code></pre>             
+            </section>
+            <section>
+                <h3>Arguments</h3>
+                <p>You can also pass variables into functions. These variables do not need to have the same name as the function arguments.</p>
+                <pre><code>
+&lt;?php
+    function addOne($inputNumber){
+        $newNumber = $inputNumber + 1;
+        echo '&lt;p&gtYou now have ' . $newNumber . '&lt;/p&gt';
+    }
+    //Declare variables
+    $numberOfKittens = 5;
+    $numberOfPuppies = 4;
+    //Use them in functions
+    addOne($numberOfKittens);
+    addOne($numberOfPuppies);    
+?&gt;
+				</code></pre>             
+            </section>
+            <section>
+				<h3>Let's Develop It</h3>
+                <p>Turn the code you wrote to output someone's full name into a function, then use it.</p> 
+			</section>
+            <section>
+                <h3>Returning Values</h3>
+                <p>You can have a function give you back a value, to use later.</p>
+                <pre><code>
+&lt;?php
+    function square($num) {
+        return $num * $num;
+    }
+    echo square(4);   // outputs '16'.
+    $squareOfFive = square(5); // will make $squareOfFive equal 25.
+?&gt;
+				</code></pre>
+                <p>Return will immediately end a function.</p>
+            </section>
+            <section>
+				<h3>Let's Develop It</h3>
+                <p>Add a return statement to your name function. Use that function to set the value of a variable.</p> 
+			</section>
         </section>
+        
+        <!-- Final slides-->
+		<section id="final">
+			<section>
+				<h3>You did it!</h3>
+				<img src="images/celebration.jpg" alt="People celebrating"/>
+				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/morphomir/2407451929/" target="_blank">Mircea</a> <a href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">cc</a></p>
+			</section>
+			
+			<section>
+				<h3>Resources</h3>
+					<ul>
+						<li><a href="http://www.php.net/manual/en/" target="_blank">PHP Manual</a>, the official PHP documentation. Check the comments; they are useful.</li>
+						<li><a href="http://www.codecademy.com/tracks/php" target="_blank">Code Academy</a>, with interactive PHP lessons to help you review.</li>
+					</ul>
+			</section>
+		</section>
  
 			</div><!-- Close .slides -->
   		<footer>
