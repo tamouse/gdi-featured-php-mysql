@@ -214,7 +214,7 @@
                 <p>Once you have created a variable, you can use it in your code. Just type a dollar sign and the name of the variable</p>
                 <pre><code>
 &lt;?php
-    var $numberOfKittens = 5;
+    $numberOfKittens = 5;
     echo $numberOfKittens;
 ?&gt;
 				</code></pre>
@@ -223,6 +223,84 @@
 				<h3>Let's Develop It</h3>
                 <p>In your PHP file, create a variable and give it a valid name and a value. Then, echo it out on the screen.</p> 
 			</section>
+        </section>
+        <!-- Variable Types and Operators-->
+        <!-- Numbers-->
+        <section>
+            <section>
+				<h3>Numbers</h3>
+                <p>Variable can be numbers, either integers or floats (decimals).</p>
+                <pre><code>
+&lt;?php
+    $numberOfKittens = 5;
+    $kittensPerPuppy = 1.25;
+?&gt;
+				</code></pre>
+                <p>PHP will automatically convert integers to floats if needed</p>
+			</section>
+            <section>
+				<h3>Arithmetic Operators</h3>
+                <p>Once you have numbers, you can do math with them!</p>
+                <pre><code>
+&lt;?php
+    $numberOfKittens = 5;
+    $numberOfPuppies = 4;
+    $numberOfAnimals = $numberOfKittens + $numberOfPuppies;
+?&gt;
+				</code></pre>
+			</section>
+            <section>
+				<h3>Arithmetic Operators</h3>
+                <table>                
+                    <thead>
+                      <tr>
+                       <th>Example</th>
+                       <th>Name</th>
+                       <th>Result</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                       <td>-$a</td>
+                       <td>Negation</td>
+                       <td>Opposite of $a.</td>
+                      </tr>
+                      <tr>
+                       <td>$a + $b</td>
+                       <td>Addition</td>
+                       <td>Sum of $a and $b.</td>
+                      </tr>
+                      <tr>
+                       <td>$a - $b</td>
+                       <td>Subtraction</td>
+                       <td>Difference of $a and $b.</td>
+                      </tr>
+                      <tr>
+                       <td>$a * $b</td>
+                       <td>Multiplication</td>
+                       <td>Product of $a and $b.</td>
+                      </tr>
+                      <tr>
+                       <td>$a / $b</td>
+                       <td>Division</td>
+                       <td>Quotient of $a and $b.</td>
+                      </tr>
+                      <tr>
+                       <td>$a % $b</td>
+                       <td>Modulus</td>
+                       <td>Remainder of $a divided by $b.</td>
+                      </tr>
+                    </tbody>                
+                </table>
+			</section>
+            <section>
+				<h3>Let's Develop It</h3>
+                <p>Create two variables, and try some arithmetic operators. Don't forget to echo your results!</p> 
+			</section>
+        </section>
+        <!-- Strings -->
+        <section>
+        
         </section>
         <!-- Functions -->
         <section>
