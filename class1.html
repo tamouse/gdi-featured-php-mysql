@@ -44,7 +44,7 @@
             </section>
                 
         <!-- Welcome-->
-        <section>
+        <section id="welcome">
             <section>
               <h3>Welcome!</h3>
               <div class = "left-align">
@@ -73,7 +73,7 @@
          </section>
          
          <!-- What is PHP-->
-         <section>
+         <section id="whatis">
             <section>
                 <h3>PHP is a server-side language</h3>
                 <img src="images/client-server.jpg" alt="Laptop and server connected via the internet"/>
@@ -101,7 +101,7 @@
             </section>
         </section>
         <!-- Install -->
-        <section>
+        <section id="install">
             <section>
                 <h3>Let's Develop It</h3>
                 <p>Let's get PHP running on your machine.<p>
@@ -117,11 +117,11 @@
 &lt;html&gt;
     &lt;head&gt;
         &lt;title&gt;Test Page&lt;/title&gt;
-	&lt;/head&gt;
+    &lt;/head&gt;
 	&lt;body&gt;
         &lt;p&gt;
         &lt;?php
-            echo ("Hello World");
+            echo 'Hello World';
         ?&gt;
         &lt;/p&gt;
     &lt;/body&gt;
@@ -129,7 +129,52 @@
 				</code></pre>
             </section>
         </section>
-         
+        <!-- Basics -->
+        <section id="basics">
+            <section>
+				<h3>Computers need simple, clear instructions</h3>
+				<img src="images/confusedrobot.jpg" alt="Confused robot"/>
+				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/baboon/3946055/" target="_blank">baboon</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+			</section>
+            <section>
+                <h3>PHP Tags</h3>
+                <p>You can mix PHP and HTML. When a PHP server looks at a page, it only pays attention to code within the PHP tags.</p>
+                <pre><code>
+&lt;?php CODE GOES HERE  ?&gt;
+				</code></pre>
+            </section>
+            <section>
+                <h3>Separating Instructions</h3>
+                <p>After each individual instruction (called a block of code), you must add a semicolon.</p>
+                <pre><code>
+&lt;?php
+    echo 'Hello World!';
+    echo 'I am glad to meet you';
+    echo 'I am fuzzy';
+?&gt;
+				</code></pre>
+            </section>
+            <section>
+                <h3>Comments</h3>
+                <p>You can leave comments in your code&mdash;notes that people can read and computers will ignore.</p>
+                <pre><code>
+&lt;?php
+    /*I can wrap long comments 
+    with multiple lines 
+    like this*/
+    echo 'Hello World!'; //Or mark short comments like this
+?&gt;
+				</code></pre>
+            </section>
+        </section>
+        <!-- Variables -->
+        <section>
+
+        </section>
+        <!-- Functions -->
+        <section>
+        
+        </section>
  
 			</div><!-- Close .slides -->
   		<footer>
