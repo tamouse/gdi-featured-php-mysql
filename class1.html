@@ -71,7 +71,35 @@
               </div>
             </section>
          </section>
-         
+        <!-- Install -->
+        <section id="install">
+            <section>
+                <h3>Let's Develop It</h3>
+                <p>Let's get PHP running on your machine.<p>
+                <p>PCs: <a href="http://www.wampserver.com/en/download.php">http://www.wampserver.com/en/download.php</a></p>
+                <p>Macs: <a href="http://www.mamp.info/en/downloads/index.htm">http://www.mamp.info/en/downloads/index.htm</a></p>
+                <p>Test: <a href="http://localhost/">http://localhost/</a>
+            </section>
+            <section>
+                <h3>Let's Develop It</h3>
+                <p>Make your first page! You'll need to call it index.php, and put it in your www directory. On Windows, the default is C:\wamp\www. On a Mac, it is \Applications\MAMP\www\.</p>
+                <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Test Page&lt;/title&gt;
+    &lt;/head&gt;
+	&lt;body&gt;
+        &lt;p&gt;
+        &lt;?php
+            echo 'Hello World';
+        ?&gt;
+        &lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+				</code></pre>
+            </section>
+        </section>         
          <!-- What is PHP-->
          <section id="whatis">
             <section>
@@ -100,35 +128,7 @@
                 </ul>
             </section>
         </section>
-        <!-- Install -->
-        <section id="install">
-            <section>
-                <h3>Let's Develop It</h3>
-                <p>Let's get PHP running on your machine.<p>
-                <p>PCs: <a href="http://www.wampserver.com/en/download.php">http://www.wampserver.com/en/download.php</a></p>
-                <p>Macs: <a href="http://www.mamp.info/en/downloads/index.htm">http://www.mamp.info/en/downloads/index.htm</a></p>
-                <p>Test: <a href="http://localhost/">http://localhost/</a>
-            </section>
-            <section>
-                <h3>Let's Develop It</h3>
-                <p>Make your first page!</p>
-                <pre><code>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;title&gt;Test Page&lt;/title&gt;
-    &lt;/head&gt;
-	&lt;body&gt;
-        &lt;p&gt;
-        &lt;?php
-            echo 'Hello World';
-        ?&gt;
-        &lt;/p&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-				</code></pre>
-            </section>
-        </section>
+
         <!-- Basics -->
         <section id="basics">
             <section>
@@ -145,7 +145,7 @@
             </section>
             <section>
                 <h3>Separating Instructions</h3>
-                <p>After each individual instruction (called a block of code), you must add a semicolon.</p>
+                <p>After each individual statement, you must add a semicolon.</p>
                 <pre><code>
 &lt;?php
     echo 'Hello World!';
