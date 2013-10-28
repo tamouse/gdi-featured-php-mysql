@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Class 1 ~ PHP/MySQL ~ Girl Develop It</title>
+		<title>Class 2 ~ PHP/MySQL ~ Girl Develop It</title>
 
 		<meta name="description" content="This is a modification of the official Girl Develop It PHP/MySQL curriculum, developed by Sylvia Richardson for the Raleigh/Durham chapter.
 
@@ -58,7 +58,47 @@
               </ul>
               </div>
             </section>
-         </section>
+            <section>
+                <h3>Debugging your code</h3>
+                <p>Not seeing anything when you run your code? You may need to turn on error logging. Put this code at the top of your page.</p>
+                <pre><code>
+&lt;?php
+    // Report all PHP errors
+    error_reporting(-1);
+?&gt;
+				</code></pre>
+            
+            </section>
+        </section>
+        
+        <!-- Review -->
+        <section id="review">
+            <section>
+                <h3>Let's Look Back</h3>
+                <img src="images/backwards-dance.jpg" alt="Woman looking backward as she dances"/>
+				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/zeepack/4398082292/" target="_blank">Deepak Bhatia</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+                
+            </section>
+            <section>
+                <h3>Code Search</h3>
+                <p>In this code, spot the comments, variables, operator, function, argument, and return value.</p>
+                <pre><code>
+&lt;?php
+    function calculateTip($total) {
+        $tipPercent = 0.15; //Can be changed
+        return ($total * $tipPercent);
+    }
+
+    $billTotal = 10.00;
+    $billTip   = calculateTip($billTotal);
+    $receipt   = 'Meal: ' . $billTotal . ' Tip: ' . $billTip . 
+        ' Total: ' . ($billTotal + $billTip);
+    echo $receipt; 
+?&gt;
+				</code></pre>
+            </section>
+        </section> 
+        
  
 			</div><!-- Close .slides -->
   		<footer>
