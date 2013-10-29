@@ -503,9 +503,47 @@ if ($bananas &gt; 0) {
             </section>
             <section>
 				<h3>Let's Develop It</h3>
-                <p>Create an array of your friends and their hair colors. Echo a few values onto your screen.</p> 
+                <p>Create an array of your friends and their favorite foods. Echo a few values onto your screen.</p> 
 			</section>
         </section>
+        
+        <!-- For Each Loops -->
+        <section id="foreach">
+            <section>
+                <h3>Foreach loops</h3>
+                <p>Foreach is a special type of loop that works with arrays.</p>
+                <pre><code>
+&lt;?php
+    $numberList = array(1, 2, 3, 4, 5);
+    foreach ($numberList as $value) {
+        echo $value . ' times 2 equals ' . ($value*2) . '&lt;br /&gt;';
+    }
+?&gt;  
+				</code></pre>
+            </section>
+            <section>
+                <h3>Arrays with keys</h3>
+                <p>You can also use the key values in your foreach loop.</p>
+                <pre><code>
+&lt;?php
+    $kittenColors = array(
+        'Fluffy' =&gt; 'tabby',
+        'Midnight' =&gt; 'black',
+        'Admiral Snuggles' =&gt; 'white',
+    );
+    
+    foreach ($kittenColors as $name =&gt; $color) {
+        echo 'The kitten ' . $name . ' has ' . $color . ' fur.&lt;br /&gt;';
+    }
+?&gt;  
+				</code></pre>
+            </section>
+            <section>
+				<h3>Let's Develop It</h3>
+                <p>Take your array of friends and write a foreach loop that echos "My friend NAME like FOOD."</p>
+			</section>
+        </section>
+
         
         </div><!-- Close .slides -->
   		<footer>
