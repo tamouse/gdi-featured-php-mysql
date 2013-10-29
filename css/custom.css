@@ -18,6 +18,10 @@ p.credit{
 	max-height: 75%;
 }
 
+table.smalltext{
+    font-size: .6em;
+}
+
   
 /*
  * Hide only visually, but have it available for screenreaders: h5bp.com/v
