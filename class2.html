@@ -367,68 +367,9 @@ if ($bananas &gt; 0) {
                 <p>Add a logical operator to your what to wear program.</p> 
 			</section>
         </section>
-        
-         <!-- Arrays -->
-        <section id="arrays">
-            <section>
-                <h3>Arrays</h3>
-                <img src="images/kitten-group.jpg" alt="Group of kittens"/>
-				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/pasotraspaso/4444291348/" target="_blank">Jesus Solana</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
-            </section>
-            <section>
-                <h3>Arrays</h3>
-                <p>Arrays are lists of values associated with a key. The key needs to be an integer or a string, the value can be any type.</p>
-                <pre><code>
-&lt;?php
-    $kittenColors = array(
-        'Fluffy' => 'tabby',
-        'Midnight' => 'black',
-        'Admiral Snuggles' => 'white',
-    );
-?&gt;
-				</code></pre>
-            </section>
-            <section>
-                <h3>Using arrays</h3>
-                <p>Once you have an array, you use a key to call a value.</p>
-                <pre><code>
-&lt;?php
-    $kittenColors = array(
-        'Fluffy' => 'tabby',
-        'Midnight' => 'black',
-        'Admiral Snuggles' => 'white',
-    );
-    echo $kittenColors['Midnight']; //prints 'black'
-?&gt;
-				</code></pre>                
-            </section>
-            <section>
-                <h3>Expanding arrays</h3>
-                <p>Arrays don't have a fixed length; you can add and take away items.</p>
-                <pre><code>
-&lt;?php
-    $kittenColors = array(
-        'Fluffy' =&gt; 'tabby',
-        'Midnight' =&gt; 'black',
-        'Admiral Snuggles' =&gt; 'white',
-    );
-    
-    // This adds a new element to the array with key 'Monster'
-    $kittenColors['Monster'] = 'gray'; 
-    
-    // This removes the element with the key 'Midnight'
-    unset($kittenColors['Midnight']);    
-?&gt;                
-                </code></pre>
-            </section>
-            <section>
-				<h3>Let's Develop It</h3>
-                <p>Create an array of your friends and their hair colors. Echo a few values onto your screen.</p> 
-			</section>
-        </section>
-        
+              
         <!-- Loops -->
-        <section id="boolean">
+        <section id="loops">
             <section>
                 <h3>Loops</h3>
                 <img src="images/kitten-circle.jpg" alt="Kitten in ball"/>
@@ -493,9 +434,80 @@ if ($bananas &gt; 0) {
 			</section>
         </section>
         
+         <!-- Arrays -->
+        <section id="arrays">
+            <section>
+                <h3>Arrays</h3>
+                <img src="images/kitten-group.jpg" alt="Group of kittens"/>
+				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/pasotraspaso/4444291348/" target="_blank">Jesus Solana</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+            </section>
+            <section>
+                <h3>Arrays</h3>
+                <p>Arrays are lists of values associated with a key. The key needs to be an integer or a string, the value can be any type.</p>
+                <pre><code>
+&lt;?php
+    $kittenColors = array(
+        'Fluffy' => 'tabby',
+        'Midnight' => 'black',
+        'Admiral Snuggles' => 'white',
+    );
+?&gt;
+				</code></pre>
+            </section>
+            <section>
+                <h3>Using arrays</h3>
+                <p>Once you have an array, you use a key to call a value.</p>
+                <pre><code>
+&lt;?php
+    $kittenColors = array(
+        'Fluffy' => 'tabby',
+        'Midnight' => 'black',
+        'Admiral Snuggles' => 'white',
+    );
+    echo $kittenColors['Midnight']; //prints 'black'
+?&gt;
+				</code></pre>                
+            </section>
+            <section>
+                <h3>Expanding arrays</h3>
+                <p>Arrays don't have a fixed length; you can add and take away items.</p>
+                <pre><code>
+&lt;?php
+    $kittenColors = array(
+        'Fluffy' =&gt; 'tabby',
+        'Midnight' =&gt; 'black',
+        'Admiral Snuggles' =&gt; 'white',
+    );
+    
+    // This adds a new element to the array with key 'Monster'
+    $kittenColors['Monster'] = 'gray'; 
+    
+    // This removes the element with the key 'Midnight'
+    unset($kittenColors['Midnight']);    
+?&gt;                
+                </code></pre>
+            </section>
+            <section>
+                <h3>Arrays without keys</h3>
+                <p>If you don't specify a key, PHP will just automatically assign integers as keys..</p>
+                <pre><code>
+&lt;?php
+    $fruits = array("apple", "orange", "banana", "kiwi");
+    var_dump($fruits);
+    
+    //You can add with no key as well
+    $fruits[] = 'mango';
+    var_dump($fruits);    
+?&gt;                
+                </code></pre>
+            </section>
+            <section>
+				<h3>Let's Develop It</h3>
+                <p>Create an array of your friends and their hair colors. Echo a few values onto your screen.</p> 
+			</section>
+        </section>
         
- 
-			</div><!-- Close .slides -->
+        </div><!-- Close .slides -->
   		<footer>
         <div class="copyright">
           HTML/CSS ~ Girl Develop It ~
