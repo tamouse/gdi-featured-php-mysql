@@ -277,13 +277,13 @@ if ($bananas &gt; 0) {
             </section>
             <section>
                 <h3>The if/else if/else statement</h3>
-                <p>If you have multiple conditions, you can use elseif.</p>
+                <p>If you have multiple conditions, you can use else if.</p>
                 <pre><code>
 &lt;?php
     $age = 20;
     if ($age >= 35) {
       echo 'You can vote AND hold any place in government';
-    } else if ($age >= 25) {
+    } else if ($age >= 30) {
       echo 'You can vote AND run for the Senate';
     } else if ($age >= 18) {
       echo 'You can vote';
@@ -381,10 +381,10 @@ if ($bananas &gt; 0) {
                 <pre><code>
 &lt;?php
     $bottlesOfBeer = 99;
-    while ($bottlesOfBeer &gt;= 1):
+    while ($bottlesOfBeer &gt;= 1) {
         echo $bottlesOfBeer . ' bottles of beer on the wall &lt;br /&gt;';
         $bottlesOfBeer = $bottlesOfBeer - 9;
-    endwhile;
+    }
 ?&gt;
 				</code></pre>
             </section>
@@ -489,11 +489,12 @@ if ($bananas &gt; 0) {
             </section>
             <section>
                 <h3>Arrays without keys</h3>
-                <p>If you don't specify a key, PHP will just automatically assign integers as keys..</p>
+                <p>If you don't specify a key, PHP will just automatically assign integers as keys, starting with zero.</p>
                 <pre><code>
 &lt;?php
     $fruits = array("apple", "orange", "banana", "kiwi");
-    var_dump($fruits);
+    var_dump($fruits); //shows whole array
+    echo $fruits[1]; //will print orange
     
     //You can add with no key as well
     $fruits[] = 'mango';
