@@ -204,6 +204,7 @@ CREATE TABLE product (
         <section>
             <section>
                 <h3>Let's get connected</h3>
+                <p>Create a new file called db.inc.php and place it in the same folder as index.php</p>
                 <pre><code>
 &lt;?php
 	$link=mysqli_connect ('localhost', 'root', '');
@@ -231,6 +232,79 @@ CREATE TABLE product (
             </section>
         </section>
         
+        <!-- Adding data-->
+		<section id="adddata">
+            <section>
+                <h3>Adding data</h3>
+                <p>You add data to a MySQL database with a statement like this:</p>
+                <pre><code>
+INSERT INTO table_name
+VALUES (value1,value2,value3,...);
+				</code></pre>
+                <p>But first, we have to collect some data from our users</p>
+            </section>
+            <section>
+                <h3>Let's make a form!</h3> 
+                <pre><code>
+&lt;form action="product_insert_result.php" method="get"&gt;
+	Company: &lt;input type="text" name="company"/&gt;&lt;br/&gt;
+	Type: &lt;input type="text" name="type"/&gt;&lt;br/&gt;
+	Roast:
+	&lt;input type="radio" name="roast" value="light"&gt;Light&lt;/input&gt;
+	&lt;input type="radio" name="roast" value="medium"&gt;Medium &lt;/input&gt;
+	&lt;input type="radio" name="roast" value="dark"&gt;Dark&lt;/input&gt;
+	&lt;br/&gt;
+	&lt;textarea name="description" rows="10" cols="40"&gt;&lt;/textarea&gt;&lt;br/&gt;
+	&lt;input type="submit" value="Submit"/&gt;
+&lt;/form&gt;
+				</code></pre>
+            </section>
+            <section>
+                <h3>What just happened?</h3>
+                <p>We made a basic HTML form to collect some data, and then send it to the file product_insert_result.php. Of course, that does not exist yet.</p>          
+            </section>
+            <section>
+                <h3>Form processing</h3>
+                <p>Create a new file called product_insert_result.php and place it in the same folder as index.php</p>
+                <pre><code>
+&lt;?php 
+	include 'include/db.inc.php'; 
+	$company = mysqli_real_escape_string($link, $_GET['company']); 
+	$type = mysqli_real_escape_string($link, $_GET['type']); 
+	$roast = mysqli_real_escape_string($link, $_GET['roast']);
+	$description = mysqli_real_escape_string($link, $_GET['description']);
+?>&gt;
+				</code></pre>
+            </section>
+            <section>
+                <h3>What just happened?</h3>
+                <p>We used an <span class="yellow">include</span> command to reuse our "connect to DB" code. Then, we assigned the values from the form to variables. We used the command <span class="yellow">mysqli_real_escape_string</span> to prep the data for MySQL, so it won't barf it back.</p>          
+            </section>
+            <section>
+                <h3>Inserting data</h3>
+                <p>Right below the previous code, add:</p>
+                <pre><code>
+&lt;?php 
+    $sql = "INSERT INTO product SET
+	company='$company',
+	type='$type',
+	roast='$roast',
+	description='$description'";
+	if (!mysqli_query($link, $sql)){
+		$error = 'Error adding submitted data: '
+        . mysqli_error($link);
+		echo $error;
+		exit();
+	}
+	header('Location:product_show.php');
+?>&gt;
+				</code></pre>
+            </section>
+            <section>
+                <h3>What just happened?</h3>
+                <p>We created a string called $sql and used it to build an SQL statement. (Note the careful use of quotes!) We then passed that string to the database, with an error message just in case. Finally, we told the form to send the user to product_show.php.</p>          
+            </section>
+        </section>
         <!-- Final slides-->
 		<section id="final">
 			<section>

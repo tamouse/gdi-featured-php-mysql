@@ -1,5 +1,5 @@
 ***Connecting to a database***
-If needed, replace ('localhost', 'root', '') with your server, username, and password. Place this in a new file called db.inc.php
+If needed, replace ('localhost', 'root', '') with your server, username, and password. Place this in a new file called db.inc.php in the same folder as index.php
 
 <?php
 	$link=mysqli_connect ('localhost', 'root', '');
@@ -35,3 +35,27 @@ Drop this directly into the <body> section of your index.php file.
 	<textarea name="description" rows="10" cols="40"></textarea><br/>
 	<input type="submit" value="Submit"/>
 </form>
+
+
+----
+***Form Processing Code***
+Create a new file called product_insert_result.php and place it in the same folder as index.php
+
+<?php 
+	include 'db.inc.php'; 
+	$company = mysqli_real_escape_string($link, $_GET['company']); 
+	$type = mysqli_real_escape_string($link, $_GET['type']); 
+	$roast = mysqli_real_escape_string($link, $_GET['roast']);
+	$description = mysqli_real_escape_string($link, $_GET['description']);
+	$sql = "INSERT INTO product SET
+	company='$company',
+	type='$type',
+	roast='$roast',
+	description='$description'";
+	if (!mysqli_query($link, $sql)){
+		$error = 'Error adding submitted data: ' . mysqli_error($link);
+		echo $error;
+		exit();
+	}
+	header('Location:product_show.php');
+?>
