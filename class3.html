@@ -137,7 +137,68 @@
                 </ul>
             </section>
         </section>
-            
+          <!--Walk through/Tutorial-->
+        <section>
+            <section>
+                <h3>Walkthrough</h3>
+                <p>We will create a database for a coffee shop</p>
+                <img src="images/coffee.jpg" alt="Cup of coffee"/>
+				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/ahmedrabea/274197870/" target="_blank">Ahmed Rabea</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+            </section>
+            <section>
+				<h3>Let's Develop It</h3>
+                <p>Let's create our first database. Start up WAMP/MAMP and go to <a href="http://localhost/phpmyadmin/">http://localhost/phpmyadmin/</a> (Windows) or <a href="http://localhost:8888/phpmyadmin/">http://localhost:8888/phpmyadmin/</a> (Mac)</p>
+                <p>The default username is <span class="yellow">"root"</span>. The default password is either <span class="yellow">""</span> (i.e., leave it blank) or <span class="yellow">"root"</span>.</p>
+			</section>
+            <section>
+                <h3>Find the Database Option</h3>
+                <img src="images/phpMyAdmin-intro.png" alt="PHP MyAdmin intro screen"/>
+                <pre><code>
+C:\wamp\bin\mysql\mysql15.6.12\bin&gt;mysql.exe -u root
+				</code></pre>
+            </section>
+            <section>
+                <h3>Create a new DB called "coffee"</h3>
+                <img src="images/phpMyAdmin-createDB.png" alt="Create database screen"/>
+                <pre><code>
+CREATE DATABASE coffee;
+				</code></pre>                
+            </section>
+            <section>
+                <h3>Select your database</h3>
+                <img src="images/phpMyAdmin-useDB.png" alt="Select the database"/>
+                <pre><code>
+USE coffee;
+				</code></pre>                
+            </section>
+            <section>
+                <h3>Create a table called "product"</h3>
+                <img src="images/phpMyAdmin-createTable.png" alt="Create table screen"/>
+                <pre><code>
+CREATE TABLE product (
+    productID int,
+    company varchar(255),
+    type varchar(255),
+    roast varchar(255),
+    description text
+);
+				</code></pre>              
+            </section>
+            <section>
+                <h3>Add your columns</h3>
+                <ul>
+                    <li>productID - int</li>
+                    <li>company - varchar - 255</li>
+                    <li>type - varchar - 255</li>
+                    <li>roast - varchar - 255</li>
+                    <li>description - text - 255</li>
+                </ul>             
+            </section>
+            <section>
+                <h3>Add your columns</h3>
+                <img src="images/phpMyAdmin-createTableColumns.png" alt="Adding columns"/>   
+            </section>
+        </section>     
 
                
         <!-- Final slides-->
