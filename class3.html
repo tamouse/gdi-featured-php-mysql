@@ -200,9 +200,35 @@ CREATE TABLE product (
             </section>
         </section>
         
-        <!--Adding data-->
+        <!--Connecting to DB-->
         <section>
-
+            <section>
+                <h3>Let's get connected</h3>
+                <pre><code>
+&lt;?php
+	$link=mysqli_connect ('localhost', 'root', '');
+	if  (!$link){	
+		$output='Unable to connect to the database';
+		echo $output; 	
+		exit();
+ 	}
+	if (!mysqli_set_charset($link,'utf8')) {	
+		$output = 'Unable to set database connection encoding.';	
+		echo $output; 	
+		exit();
+	}
+	if (!mysqli_select_db($link, 'coffee')){	
+		$output = 'Unable to locate the database.';	
+		echo $output; 	
+	exit();
+	}
+?&gt;
+				</code></pre>                
+            </section>
+            <section>
+                <h3>What just happened?</h3>
+                <p>We connected to MySQL with our username and password, set our character set (the group of characters we will use), and chose the coffee database. We included some error messages as needed.</p>          
+            </section>
         </section>
         
         <!-- Final slides-->
