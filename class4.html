@@ -152,7 +152,20 @@ REFERENCES company (companyID)
 ON DELETE CASCADE ON UPDATE CASCADE;
 				</code></pre>              
             </section>
-        </section>        
+            <section>
+                <h3>Add some sample data</h3>
+                <pre><code>
+INSERT INTO company SET	name='Starbucks', phoneNumber='(800)555-7282';
+INSERT INTO company SET	name='Bean Traders', phoneNumber='(919)555-5895';
+INSERT INTO company SET	name='Mean Beans', phoneNumber='(303)555-8475';
+INSERT INTO product SET	companyID_fk=1, type='French Vanilla', roast='dark', description='Strong coffee flavor with a hint of vanilla';
+INSERT INTO product SET	companyID_fk=1, type='Pumpkin spice', roast='medium', description='Seasonal';
+INSERT INTO product SET	companyID_fk=2, type='Dip Into Decaf', roast='light', description='You will barely notice its coffee!';
+				</code></pre>              
+            </section>
+        </section> 
+
+        
         
         <!-- Final slides-->
 		<section id="final">
