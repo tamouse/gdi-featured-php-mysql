@@ -203,8 +203,33 @@ INSERT INTO product SET	companyID_fk=2, type='Dip Into Decaf', roast='light', de
             </section>
         </section> 
 
+        <!--Updating submission form-->
+        <section> 
+            <section>
+                <h3>Updating our submission forms</h3>
+                <p>Right now, our product entry form is a free text entry. It looks like this:</p>
+                <pre><code>
+Company: &lt;input type="text" name="company"/&gt;&lt;br/&gt;
+				</code></pre>
+            </section>
+            <section>
+                <h3>Restricting choices</h3>
+                <p>We want it to only show approved companies from our DB, so looks like this:</p>
+                <pre><code>
+Company: &lt;select name="company"&gt;
+    &lt;option value="2"&gt;Bean Traders&lt;/option&gt;
+    &lt;option value="3"&gt;Mean Beans&lt;/option&gt;
+    &lt;option value="1"&gt;Starbucks&lt;/option&gt;
+&lt;/select&gt;
+				</code></pre>
+            </section>
+            <section>
+                <h3>Let's Develop It</h3>
+                <p>Your sample code has a file called add-products.php. It is almost complete. Add code to the commented sections to get it to work.</p>
+            </section>
+        </section>
         
-        
+
         <!-- Final slides-->
 		<section id="final">
 			<section>
