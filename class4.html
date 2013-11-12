@@ -84,7 +84,75 @@
             </section>
         </section>
         
-        
+        <!--Walk through/Tutorial-->
+        <section>            
+            <section>
+				<h3>Let's Develop It</h3>
+                <p>Let's edit first database. Start up WAMP/MAMP and go to <a href="http://localhost/phpmyadmin/">http://localhost/phpmyadmin/</a> (Windows) or <a href="http://localhost:8888/phpmyadmin/">http://localhost:8888/phpmyadmin/</a> (Mac)</p>
+                <p>The default username is <span class="yellow">"root"</span>. The default password is either <span class="yellow">""</span> (i.e., leave it blank) or <span class="yellow">"root"</span>.</p>
+			</section>
+            <section>
+                <h3>Select the coffee database</h3>
+                <img src="images/phpMyAdmin-useDB.png" alt="Select the database"/>
+                <pre><code>
+USE coffee;
+				</code></pre>                
+            </section>
+            <section>
+                <h3>Delete the product table</h3>
+                <img src="images/phpMyAdmin-drop.png" alt="Drop table screen"/>
+                <pre><code>
+DROP TABLE product;
+				</code></pre>              
+            </section>
+            <section>
+                <h3>Use SQL to recreate the product table</h3>
+                <img src="images/phpMyAdmin-SQLqueries.png" alt="SQL screen"/>
+                <pre><code>
+CREATE TABLE product (
+    productID int NOT NULL AUTO_INCREMENT,
+    companyID_fk int,
+    type varchar(255),
+    roast varchar(255),
+    description text,
+    PRIMARY KEY (productID)
+);
+				</code></pre>              
+            </section>
+            <section>
+                <h3>Use SQL to create a company table</h3>
+                <img src="images/phpMyAdmin-SQLqueries.png" alt="SQL screen"/>
+                <pre><code>
+CREATE TABLE company (
+    companyID int NOT NULL AUTO_INCREMENT,
+    name varchar(255),
+    phoneNumber varchar(255),
+    PRIMARY KEY (companyID)
+);
+				</code></pre>              
+            </section>
+            <section>
+                <h3>Create an index on companyID_fk</h3>
+                <img src="images/phpMyAdmin-addindex.png" alt="Add an index"/>
+                <pre><code>
+ALTER TABLE product ADD INDEX (companyID_fk) ;
+				</code></pre>              
+            </section>
+            <section>
+                <h3>Open the product table and select relation view</h3>
+                <img src="images/phpMyAdmin-relationview.png" alt="Add an index"/>            
+            </section>
+            <section>
+                <h3>Add a relationship</h3>
+                <img src="images/phpMyAdmin-addrelationship.png" alt="Add a relationship"/>
+                <pre><code>
+ALTER TABLE product
+ADD CONSTRAINT FK_company FOREIGN KEY (companyID_fk)
+REFERENCES company (companyID)
+ON DELETE CASCADE ON UPDATE CASCADE;
+				</code></pre>              
+            </section>
+        </section>        
         
         <!-- Final slides-->
 		<section id="final">
