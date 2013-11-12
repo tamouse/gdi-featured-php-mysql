@@ -229,7 +229,36 @@ Company: &lt;select name="company"&gt;
             </section>
         </section>
         
-
+        <!--URL parameters-->
+        <section>
+            <section>
+                <h3>Passing information</h3>
+                <img src="images/message-bottle.jpg" alt="Message in a bottle"/>
+				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/myklroventine/3545127104/" target="_blank">Mykl Roventine</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+            </section>
+            <section>
+                <h3>URL parameters</h3>
+                <p>Up until now, we have only passed data via forms. We can also pass data in the URL itself. This is called a parameter.</p>
+                <pre><code>
+http://www.website.com/file.php?parameter=value
+				</code></pre>
+            </section>
+            <section>
+                <h3>Using parameters</h3>
+                <p>You can retrieve a parameter's value and store it as a variable</p>
+                <pre><code>
+http://www.website.com/file.php?parameter=value
+&lt;?php
+    $variableName = htmlspecialchars($_GET["parameter"]);
+?&gt;
+				</code></pre>
+            </section>
+            <section>
+                <h3>Let's Develop It</h3>
+                <p>Your sample code has a file called delete-products.php. It is almost complete. Add code to the commented sections to get it to work.</p>
+            </section>
+        </section>
+        
         <!-- Final slides-->
 		<section id="final">
 			<section>
