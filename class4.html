@@ -274,10 +274,18 @@ while($recording=mysqli_fetch_array($result)){
           <section>
           <h3>Using parameters</h3>
           <p>You can retrieve a parameter's value and store it as a variable</p>
+          <p>If you use a URL like this:</p>
 <pre><code class="string">http://www.website.com/file.php?parameter=value
 </code></pre>
+          <p>You can retrieve the values like this:</p>
 <pre><code class="php">$variableName = htmlspecialchars($_GET["parameter"]);
 </code></pre>
+          </section>
+          <section>
+          <h3>Using parameters on our site</h3>
+            <p>How can we use this? On the view products page, I have set up a delete link for each item.</p>
+            <img src="img/delete-link.png" alt="Screenshot with delete link highlighted"/>
+            <p>This link uses a parameter to send the product ID to the delete page.</p>
           </section>
           <section>
             <h3>Let's Develop It</h3>
