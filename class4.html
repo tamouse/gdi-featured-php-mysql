@@ -182,7 +182,7 @@
           <section>
             <h3>Create an index on companyID_fk</h3>
             <img src="img/phpMyAdmin-addindex.png" alt="Add an index"/>
-<pre><code class="sql">ALTER TABLE product ADD INDEX (companyID_fk) ;
+<pre><code class="sql">ALTER TABLE product ADD INDEX (companyID_fk);
 </code></pre>
           </section>
           <section>
@@ -230,8 +230,31 @@ INSERT INTO product SET  companyID_fk=2, type='Dip Into Decaf', roast='light', d
 </code></pre>
           </section>
           <section>
+            <h3>Using DB information in forms</h3>
+            <p>How can we do that? We can use SQL to ask the database for information:</p>
+<pre><code class="sql">SELECT companyID, name FROM company ORDER BY name;
+</code></pre>
+          </section>
+          <section>
+            <h3>Using DB information in forms</h3>
+            <p>Then use a while loop to add this to our page</p>
+<pre><code class="php">$sql='SELECT companyID, name FROM company ORDER BY name';
+$result = mysqli_query($link, $sql);
+if (!$result) {
+  $error = 'Error fetching data: ' . mysqli_error($link);
+  echo $error;
+  exit();
+}
+while($recording=mysqli_fetch_array($result)){
+  //Some awesome PHP code here
+}
+</code></pre>
+          </section>
+
+          <section>
             <h3>Let's Develop It</h3>
             <p>Your sample code has a file called add-products.php. It is almost complete. Add code to the commented sections to get it to work.</p>
+            <p>Get stuck? Try looking at view-products.php to see how the while loop works there.</p>
           </section>
         </section>
 
