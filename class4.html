@@ -282,7 +282,7 @@ while($recording=mysqli_fetch_array($result)){
 </code></pre>
           </section>
           <section>
-          <h3>Using parameters on our site</h3>
+            <h3>Using parameters on our site</h3>
             <p>How can we use this? On the view products page, I have set up a delete link for each item.</p>
             <img src="img/delete-link.png" alt="Screenshot with delete link highlighted"/>
             <p>This link uses a parameter to send the product ID to the delete page.</p>
@@ -303,14 +303,42 @@ while($recording=mysqli_fetch_array($result)){
           <section>
             <h3>Editing data</h3>
             <p>Let's combine queries, forms, parameters, and logic all into one. We will</p>
-            <ul>
+            <ol>
               <li>Pass a product ID to a page using parameters</li>
               <li>Save that parameter as a variable</li>
               <li>Use a query to pull the associated data</li>
               <li>Pre-load that data into a form</li>
               <li>Send the form to processing script</li>
               <li>Update the database.</li>
-            </ul>
+            </ol>
+          </section>
+          <section>
+            <h3>Let's build it - Step 1</h3>
+            <p>On the view products page, I have set up an edit link for each item.</p>
+            <img src="img/edit-link.png" alt="Screenshot with edit link highlighted"/>
+            <p>This link uses a parameter to send the product ID to the edit page.</p>
+          </section>
+          <section>
+            <h3>Let's build it - Step 2</h3>
+            <p>In the file edit-products.php, we will:</p>
+            <ol>
+              <li>Retrieve the product ID and save it as a variable</li>
+              <li>Use the product ID in an SQL query:
+<pre><code class="sql">SELECT fields FROM tablename WHERE field='value'
+</code></pre>
+              </li>
+              <li>Pre-load that data into a form that the user can edit</li>
+              <li>Send the form data to processing script</li>
+            </ol>
+          </section>
+          <section>
+            <h3>Let's build it - Step 3</h3>
+            <p>In the file product_edit_result.php, we will:</p>
+            <ol>
+              <li>Take in data from the form</li>
+              <li>Update the database</li>
+              <li>Send the user back to the table of products</li>
+            </ol>
           </section>
           <section>
             <h3>Let's Develop It</h3>
