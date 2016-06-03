@@ -11,6 +11,7 @@
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="stylesheet" href="css/custom.css">
 
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/simple.css" id="theme">
@@ -50,7 +51,7 @@
         <!-- Opening slide -->
         <section>
           <section>
-            <img src = "img/circle-gdi-logo.png" alt="GDI Logo">
+            <img src="img/circle-gdi-logo.png" alt="GDI Logo" class="noborder" style="max-height:400px;">
             <h3>Intro to PHP and MySQL</h3>
             <h4>Class 2</h4>
           </section>
@@ -351,7 +352,7 @@ if ($bananas &gt;=2 &amp;&amp; $bananas &lt;7) {
           </section>
           <section>
             <h3>While loops</h3>
-            <p>While will repeat the same code over and over until some condition is met.</p>
+            <p>While will repeat the same code over and over as long as some condition is met.</p>
 <pre><code class="php">$bottlesOfBeer = 99;
 while ($bottlesOfBeer &gt;= 1) {
   echo $bottlesOfBeer . ' bottles of beer on the wall &lt;br /&gt;';
