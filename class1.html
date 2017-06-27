@@ -80,7 +80,18 @@
               <ul>
                 <li>Who are you?</li>
                 <li>What do you hope to get out of the class?</li>
-                <li>What is your favorite 80's song?</li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h3>Meet Your TAs</h3>
+            <div class = "left-align">
+              <p>Asking questions will help you understand better - we are here for you!</p>
+              <p class = "blue">If you need help:</p>
+              <ul>
+                <li>Make eye contact</li>
+                <li>Raise your hand</li>
               </ul>
             </div>
           </section>
@@ -118,6 +129,9 @@
         <!-- What is PHP-->
         <section id="whatis">
           <section>
+            <h2>What is PHP?</h2>
+          </section>
+          <section>
             <h3>PHP is a server-side language</h3>
             <img src="img/client-server.jpg" alt="Laptop and server connected via the internet"/>
             <p><small>Photo credits: <a href="http://www.flickr.com/photos/papalars/5210226441/" target="_blank">Andrew E. Larson</a> and <a href="http://www.flickr.com/photos/johnseb/3425464/" target="_blank">John Seb Barber</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></small></p>
@@ -133,7 +147,6 @@
             <p><small>Photo credit: <a href="http://www.flickr.com/photos/philsnyder/4216356826/" target="_blank">Phil Synder</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></small></p>
           </section>
           <section>
-            <h3>What is PHP?</h3>
             <ul>
               <li>Originally, PHP stood for Personal Home Page. The acronym doesn't mean much anymore, but officially it is called PHP: Hypertext Processor</li>
               <li>PHP is a server-side processing language. The server reads the PHP code and outputs browser-friendly HTML</li>
@@ -154,7 +167,9 @@
           <section>
             <h3>PHP Tags</h3>
             <p>You can mix PHP and HTML. When a PHP server looks at a page, it only pays attention to code within the PHP tags.</p>
-<pre><code class="html">&lt;?php CODE GOES HERE  ?&gt;
+<pre><code class="html">&lt;p&gt;This Is A Paragraph&lt;/p&gt;
+  &lt;?php PHP code goes here! ?&gt;
+  &lt;p&gt;This Is Another Paragraph&lt;/p&gt;
 </code></pre>
           </section>
           <section>
@@ -316,20 +331,23 @@ $numberOfAnimals = $numberOfKittens + $numberOfPuppies;
             <img src="img/kitten-string.jpg" alt="Cat playing with string"/>
             <p><small>Photo credit: <a href="http://www.flickr.com/photos/dirtbikedba/5796961878/" target="_blank">Mike Lawson</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></small></p>
           </section>
-          <section>
+          <!-- <section>
             <h3>String Operators</h3>
             <p>You can put strings together with a period, the concatenation operator.</p>
 <pre><code class="php">$kittensName = 'Fluffy';
 $fullName = $kittensName . ' McDougle';
 echo $fullName; //Outputs 'Fluffy McDougle'
 </code></pre>
-          </section>
+          </section> -->
           <section>
             <h3>String Operators</h3>
+            <p>You can put strings together with a period, the concatenation operator.</p>
             <p>You can also use .= to add things to the end of a string.</p>
 <pre><code class="php">$kittensName = 'Admiral';
-$kittensName .= ' Snuggles';
+$kittensName = $kittensName . ' Snuggles';
 echo $kittensName; //Outputs 'Admiral Snuggles'
+$kittenColor .= ' is cuddly';
+echo $kittensName; //Outputs 'Admiral Snuggles is cuddly'
 </code></pre>
           </section>
           <section>
