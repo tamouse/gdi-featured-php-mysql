@@ -1,8 +1,9 @@
 # Introduction to PHP and MySQL
 
-Slides and materials are hosted at [http://girldevelopit.github.io/gdi-featured-php-mysql/](http://girldevelopit.github.io/gdi-featured-php-mysql).
+Slides and materials are hosted at [http://hurrendor.com/gdi-php-mysql/](http://hurrendor.com/gdi-php-mysql/).
 
-This is a modification of the official Girl Develop It PHP/MySQL curriculum, developed by Sylvia Richardson for the Raleigh/Durham chapter.The course is meant to be taught in 4 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.
+This is a modification of the official Girl Develop It PHP/MySQL curriculum, developed by Sylvia Richardson for the Raleigh/Durham chapter.
+This course will be taught in 3 2.5 hour sections.
 
 ## Course description
 
