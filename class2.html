@@ -499,6 +499,156 @@ foreach ($kittenColors as $name =&gt; $color) {
           </section>
         </section>
 
+        <section id="intro">
+          <section>
+            <h3>MySQL</h3>
+            <p>WAMP/MAMP includes three components</p>
+            <ol>
+              <li><span class="blue">A</span>pache - A web server</li>
+              <li><span class="blue">M</span>ySQL - Database software</li>
+              <li><span class="blue">P</span>HP - The PHP processor</li>
+            </ol>
+            <p>We have been using Apache and PHP. Today, we'll learn about MySQL.</p>
+          </section>
+          <section>
+            <h3>Today's code</h3>
+            <p>We'll be looking at a lot of code today. You can download a copy to work from, as a <a href="class3-codesample.txt">txt file</a> or a <a href="class3-codesample.zip">zip file</a>.</p>
+          </section>
+        </section>
+
+        <!-- What Are Databases-->
+        <section>
+          <section>
+            <h3>A database is a way to store information...</h3>
+            <img src="img/file-cabinet.jpg" alt="File cabinet"/>
+            <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/victoriabernal/6294851265/" target="_blank">victoriabernal</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+          </section>
+          <section>
+            <h3>...and link it together</h3>
+            <img src="img/daisy-chain.jpg" alt="Daisy chain"/>
+            <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/55919472@N00/3538996117/" target="_blank">skittledog</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+          </section>
+          <section>
+            <h3>Data are stored in linked tables</h3>
+            <img src="img/chained-tables.jpg" alt="Tables attached by a chain"/>
+            <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/leithcote/4240469304/" target="_blank">Antony Oliver</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+          </section>
+          <section>
+            <h3>Instead of one giant, repetitive table...</h3>
+            <img src="img/large-table.png" alt="One big table for checkouts, books, and patron names"/>
+          </section>
+          <section>
+            <h3>...you break things into smaller tables</h3>
+            <img src="img/small-tables.png" alt="Seperate tables for patron, books, and checkout, linked by ID number"/>
+          </section>
+          <section>
+            <h3>Why?</h3>
+            <ul>
+              <li>Thoroughness</li>
+              <li>Consistency</li>
+              <li>Avoiding human error</li>
+              <li>Working with dynamic content</li>
+            </ul>
+          </section>
+        </section>
+
+        <!--Using MySQL-->
+        <section>
+          <section>
+            <h3>What is MySQL?</h3>
+            <ul>
+              <li>A relational database</li>
+              <li>Query-driven</li>
+              <li>BFFs with PHP</li>
+            </ul>
+          </section>
+          <section>
+            <h3>MySQL data types</h3>
+            <ul>
+              <li>VARCHAR - String up to 256 characters</li>
+              <li>INT - Integer of up to 11 characters</li>
+              <li>FLOAT - Decimal of any size</li>
+              <li>TEXT - Large amounts of text, no limit in size</li>
+              <li>DATE / TIME - date entries with specific formats</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Working with MySQL</h3>
+            <p>Most relational databases, including MySQL, use a language called SQL (Structured Query Language). Here are some basic commands:</p>
+            <ul>
+              <li>SELECT - get data from a database table</li>
+              <li>UPDATE - change data in a database table</li>
+              <li>DELETE - remove data from a database table</li>
+              <li>INSERT INTO - insert new data in a database tab</li>
+            </ul>
+          </section>
+        </section>
+
+        <!--Walk through/Tutorial-->
+        <section>
+          <section>
+            <h3>Walkthrough</h3>
+            <p>We will create a database for a coffee shop</p>
+            <img src="img/coffee.jpg" alt="Cup of coffee"/>
+            <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/ahmedrabea/274197870/" target="_blank">Ahmed Rabea</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+          </section>
+          <section>
+            <h3>Let's Develop It</h3>
+            <p>Let's create our first database. Start up WAMP/MAMP and go to <a href="http://localhost/phpmyadmin/">http://localhost/phpmyadmin/</a> (Windows) or <a href="http://localhost:8888/phpmyadmin/">http://localhost:8888/phpmyadmin/</a> (Mac)</p>
+            <p>The default username is <span class="blue">"root"</span>. The default password is either <span class="blue">""</span> (i.e., leave it blank) or <span class="blue">"root"</span>.</p>
+          </section>
+          <section>
+            <h3>Find the Database Option</h3>
+            <img src="img/phpMyAdmin-intro.png" alt="PHP MyAdmin intro screen"/>
+<pre><code class="sql">C:\wamp\bin\mysql\mysql15.6.12\bin&gt;mysql.exe -u root
+</code></pre>
+          </section>
+          <section>
+            <h3>Create a new DB called "coffee"</h3>
+            <img src="img/phpMyAdmin-createDB.png" alt="Create database screen"/>
+<pre><code class="sql">CREATE DATABASE coffee;
+</code></pre>
+          </section>
+          <section>
+            <h3>Select your database</h3>
+            <img src="img/phpMyAdmin-useDB.png" alt="Select the database"/>
+<pre><code class="sql">USE coffee;
+</code></pre>
+          </section>
+          <section>
+            <h3>Create a table called "product"</h3>
+            <img src="img/phpMyAdmin-createTable.png" alt="Create table screen"/>
+<pre><code class="sql">CREATE TABLE product (
+  productID int,
+  company varchar(255),
+  type varchar(255),
+  roast varchar(255),
+  description text
+);
+</code></pre>
+          </section>
+          <section>
+            <h3>Add your columns</h3>
+            <ul>
+              <li>productID - int</li>
+              <li>company - varchar - 255</li>
+              <li>type - varchar - 255</li>
+              <li>roast - varchar - 255</li>
+              <li>description - text - 255</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Add your columns</h3>
+            <img src="img/phpMyAdmin-createTableColumns.png" alt="Adding columns"/>
+          </section>
+        </section>
+
+
+
+
+
+
+
         <!-- Final slides-->
         <section id="final">
           <section>
