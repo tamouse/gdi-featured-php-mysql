@@ -216,7 +216,7 @@ echo 'Hello World!'; //Or mark short comments like this
               <li>The variable name is case-sensitive.</li>
               <li>A new variable needs to have a unique name.</li>
               <li>Variable names need to start with a letter or underscore.</li>
-              <li>Variable names can only be made of letters and numbers.</li>
+              <li>Variable names can only be made of letters, numbers, and underscores.</li>
             </ul>
           </section>
           <section>
@@ -492,12 +492,19 @@ echo $awesomeGroup . ' is pretty awesome.';
             <p><small>Photo credit: <a href="http://www.flickr.com/photos/elycefeliz/5726163170/" target="_blank">elycefeliz</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></small></p>
           </section>
           <section>
-            <h3>Boolean Variables</h3>
+            <h3>Boolean Variables &amp; Types</h3>
             <p>Boolean variables represent the logical values True and False</p>
 <pre><code class="php">$catsAreBest = true;
 $dogsRule = false;
 </code></pre>
-            <p>If you try to use another variable as a boolean, PHP will guess. The number 0, the empty string '', and the string '0' are considered false, everything else reads as true.</p>
+            <p>If you try to use another variable as a boolean, PHP will guess. The number 0, the empty string '',   and the string '0' are considered false.</p>
+            <p>Other values that return false:</p>
+            <ul>
+              <li>the Boolean value false</li>
+              <li>the float 0.0</li>
+              <li>empty arrays</li>
+              <li>NULL</li>
+            </ul>
           </section>
         </section>
 
@@ -607,14 +614,14 @@ if ($age &gt;= 16) {
 </code></pre>
           </section>
           <section>
-            <h3>The if/else if/else statement</h3>
-            <p>If you have multiple conditions, you can use else if.</p>
+            <h3>The if/elseif/else statement</h3>
+            <p>If you have multiple conditions, you can use elseif.</p>
 <pre><code class="php">$age = 20;
 if ($age >= 35) {
   echo 'You can vote AND hold any place in government';
-} else if ($age >= 30) {
+} elseif ($age >= 30) {
   echo 'You can vote AND run for the Senate';
-} else if ($age >= 18) {
+} elseif ($age >= 18) {
   echo 'You can vote';
 } else {
   echo 'You can\'t vote, but you can still
@@ -632,6 +639,7 @@ if ($age >= 35) {
               <li>Otherwise, wear whatever you want.</li>
             </ol>
           </section>
+        </section>
 
 
 
@@ -662,6 +670,7 @@ if ($age >= 35) {
           </ul>
         </section>
       </section>
+
       </div>
       <footer>
         <div class="copyright">
