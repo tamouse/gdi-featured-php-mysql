@@ -81,6 +81,7 @@
                 <li>Who are you?</li>
                 <li>What is your coding experience?</li>
                 <li>What do you hope to get out of the class?</li>
+                <li>What is your favorite flavor of ice cream?</li>
               </ul>
             </div>
           </section>
@@ -103,13 +104,13 @@
           <section>
             <h3>Let's Develop It</h3>
             <p>Let's get PHP running on your machine.<p>
-            <p>PCs: <a href="http://www.wampserver.com/en/download.php">http://www.wampserver.com/en/download.php</a></p>
+            <p>PCs: <a href="https://www.apachefriends.org/download.html"> https://www.apachefriends.org/download.html</a></p>
             <p>Macs: <a href="http://www.mamp.info/en/downloads/index.html">http://www.mamp.info/en/downloads/index.html</a></p>
             <p>Test: <a href="http://localhost/">http://localhost/</a>
           </section>
           <section>
             <h3>Let's Develop It</h3>
-            <p>Make your first page! Find your www directory. On Windows, the default is C:\wamp\www. On a Mac, it is \Applications\MAMP\htdocs\. Create a new folder, called gdi, and then create a file inside called index.php.</p>
+            <p>Make your first page! Find your www directory. On Windows, the default is C:\xampp\htdocs. On a Mac, it is \Applications\MAMP\htdocs\. Create a new folder, called gdi, and then create a file inside called index.php.</p>
 <pre><code class="html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
@@ -133,6 +134,10 @@
             <h2>What is PHP?</h2>
           </section>
           <section>
+            <h2>PHP is a recursive acronym:</h2>
+            <p> PHP: Hypertext Processor </p>
+          </section>
+          <section>
             <h3>PHP is a server-side language</h3>
             <img src="img/client-server.jpg" alt="Laptop and server connected via the internet"/>
             <p><small>Photo credits: <a href="http://www.flickr.com/photos/papalars/5210226441/" target="_blank">Andrew E. Larson</a> and <a href="http://www.flickr.com/photos/johnseb/3425464/" target="_blank">John Seb Barber</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></small></p>
@@ -141,18 +146,20 @@
             <h3>PHP can talk to databases</h3>
             <img src="img/elephants.jpg" alt="Two elephants interacting"/>
             <p><small>Photo credit: <a href="http://www.flickr.com/photos/ginable/325235488/">Ginable</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a></small></p>
+            <p> PHP has simple support for databases like MySQL. </p>
           </section>
           <section>
             <h3>PHP lets you reuse code</h3>
             <img src="img/desert-landscape.jpg" alt="Desert landscape"/>
             <p><small>Photo credit: <a href="http://www.flickr.com/photos/philsnyder/4216356826/" target="_blank">Phil Synder</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></small></p>
+            <p> You can write code once and use it everywhere. Remember, you want DRY code (Don't Repeat Yourself) </p>
           </section>
           <section>
             <ul>
-              <li>Originally, PHP stood for Personal Home Page. The acronym doesn't mean much anymore, but officially it is called PHP: Hypertext Processor</li>
+              <!-- <li>Originally, PHP stood for Personal Home Page. The acronym doesn't mean much anymore, but officially it is called PHP: Hypertext Processor</li> -->
               <li>PHP is a server-side processing language. The server reads the PHP code and outputs browser-friendly HTML</li>
-              <li>PHP has simple support for databases like MySQL.</li>
-              <li>With PHP, you can write code once and use it everywhere. Remember, you want DRY code (Don't Repeat Yourself).</li>
+              <!-- <li>PHP has simple support for databases like MySQL.</li> -->
+              <!-- <li>With PHP, You can write code once and use it everywhere. Remember, you want DRY code (Don't Repeat Yourself).</li> -->
               <li>PHP lets you build dynamic webpages that respond to input from users.</li>
             </ul>
           </section>
@@ -198,7 +205,7 @@ echo 'Hello World!'; //Or mark short comments like this
             <h3>Variables</h3>
             <p>A variable is a place to store values</p>
             <img src="img/empty-glass.jpg" alt="Empty glass"/>
-            <p><small>Photo credit: <a href="http://www.flickr.com/photos/giuliag/3570562404/" target="_blank">giulia gasparro</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></small></p>
+            <p><small>Photo credit: <a href="https://www.flickr.com/photos/verzo/5335353685/in/photolist-98t5LD-dPre9h-71thJK-X3iC-5c4KHf-FVMVH-855j1D-kz4dj-gYxm3b-8z8coD-8KNLuo-euGMKS-adJQM8-g1xKH-D5ifc5-LcCcr-aZxm5Z-arDpST-bDwMAk-4sZ1mt-9xKe5t-9CkS8W-de3J5w-77JWm4-g83ycz-bEb3HW-9jkkW5-aeonMs-bh9z3Z-9f4rjh-Af6xSn-deCMPK-orVJfQ-6ocjrT-Fq65K-7kyJfG-9EBckh-dHRJNw-7VncyR-ipUJEh-5TSWrg-4X51X5-VGd1H-dV2j91-6NTYvu-ahugNq-2rdK9u-aa66CY-6AH9sW-r24zU" target="_blank">roberto verzo</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></small></p>
           </section>
           <section>
             <h3>Variable Values</h3>
@@ -418,12 +425,10 @@ addOne($numberOfPuppies);
           <h3>Arguments vs Parameters</h3>
           <p>Argument is the value/variable/reference being passing.</p>
           <p>Parameter is the receiving variable used within a function</p>
-          <pre><code class="php">
-          function addTwo($parameter1, $parameter2) {
-            return $parameter1 + $parameter2;
-          }
-          echo addTwo(5,5);//10
-          </code></pre>
+          <pre><code class="php">function addTwo($parameter1, $parameter2) {
+return $parameter1 + $parameter2;
+}
+echo addTwo(5,5);//10 </code></pre>
         </section>
 
 
@@ -431,7 +436,7 @@ addOne($numberOfPuppies);
 
         <section>
           <h3>Let's Develop It</h3>
-          <p>Take the code you wrote and use it to concatenate somemone's name, then call it.</p>
+          <p>Take the code you wrote and use it to concatenate a superhero's name, then call it.</p>
         </section>
       </section>
 
@@ -439,7 +444,7 @@ addOne($numberOfPuppies);
       <section>
         <section>
           <h3>Returning Values</h3>
-          <p>You can have a function give you back a value, to use later.</p>
+          <p>You can have a function give you back a value to use later.</p>
 <pre><code class="php">function square($num) {
   return $num * $num;
 }
