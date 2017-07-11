@@ -17,18 +17,19 @@ function escape_html($html)
 
 $page_title = "Product Listing";
 
-// Initialize the connection to the database
-require_once 'db.inc.php';
+// Define the SQL to retrieve all the products
+$sql='SELECT productID , company, type, roast, description FROM product ORDER BY productID DESC';
+error_log("SQL to retrieve products: $sql");
+
 
 
 
 
 /** FETCHING DATA **/
 
-// Define the SQL to retrieve all the products
-$sql='SELECT productID , company, type, roast, description FROM product ORDER BY productID DESC';
-error_log("SQL to retrieve products: $sql");
 
+// Initialize the connection to the database
+require_once 'db.inc.php';
 
 // Run the query
 $result = mysqli_query($link, $sql);
@@ -47,11 +48,13 @@ while($record = mysqli_fetch_assoc($result)) {
 
 
 
+
+
+/** DISPLAY **/
+
 include_once 'page_header.php';
 
-/** DISPLAYING RESULTS **/
-
-// Now we can display the data in a table
+// Display the data fetched above as a table
 echo '<table><tr>';
 
 foreach (array_keys($data[0]) as $column) {
