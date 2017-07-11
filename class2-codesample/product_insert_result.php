@@ -1,7 +1,7 @@
 <?php
 
 // This connects the script to the database
-include 'db.inc.php';
+require_once 'db.inc.php';
 
 
 

@@ -15,10 +15,10 @@ function escape_html($html)
 
 /** INTIALIZATION **/
 
-// Initialize the connection to the database
-include 'db.inc.php';
-
 $page_title = "Product Listing";
+
+// Initialize the connection to the database
+require_once 'db.inc.php';
 
 
 
