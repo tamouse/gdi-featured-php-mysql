@@ -231,7 +231,7 @@ write your representatives.';
 </code></pre>
   </section>
   <section>
-    <h2>Last Exercise of the Day!</h2>
+    <h2>Let's Develop It!</h2>
     <p>Modify your "wear a coat" code for these conditions:</p>
     <ol>
       <li>If it is less than 50 degrees, wear a coat.</li>
@@ -243,7 +243,7 @@ write your representatives.';
 </section>
 
 
-
+  <section id="logical-operators">
           <section>
             <h3>Logical Operators</h3>
             <table>
@@ -301,7 +301,8 @@ if ($bananas &gt;=2 &amp;&amp; $bananas &lt;7) {
           </section>
           <section>
             <h3>Let's Develop It</h3>
-            <p>Add a logical operator to your what to wear program.</p>
+            <p>Add logical operators to your what to wear program to help print out the correct statements.</p>
+
           </section>
         </section>
 
@@ -372,7 +373,34 @@ for ($i = 1; $i &lt;= 50; $i++) {
           </section>
           <section>
             <h3>Arrays</h3>
-            <p>Arrays are lists of values associated with a key. The key needs to be an integer or a string, the value can be any type.</p>
+            <p>An array is a variable that can hold more than one value at a time.</p>
+
+<pre><code class="php">//Indexed Array
+  $bees = array('Queen Bee', 'Worker Bee', 'Busy Bee');
+  //Associative Array
+  $kittenColors = array(
+  'Fluffy' => 'tabby',
+  'Midnight' => 'black',
+  'Admiral Snuggles' => 'white'
+);
+</code></pre>
+          </section>
+          <section>
+            <h3>Indexed Arrays</h3>
+            <p>A list of values are associated with an index, starting at 0</p>
+            <!-- <p>PHP will just automatically assign integers as "keys", starting with zero.</p> -->
+<pre><code class="php">$fruits = array("apple", "orange", "banana", "kiwi");
+var_dump($fruits); //shows whole array
+echo $fruits[1]; //will print orange
+
+//You can add a new item
+$fruits[] = 'mango';
+var_dump($fruits);
+</code></pre>
+          </section>
+          <section>
+            <h3>Associative Arrays</h3>
+            <p>Associative arrays are lists of values associated with a key. The key needs to be an integer or a string, the value can be any type.</p>
 <pre><code class="php">$kittenColors = array(
   'Fluffy' => 'tabby',
   'Midnight' => 'black',
@@ -382,12 +410,13 @@ for ($i = 1; $i &lt;= 50; $i++) {
           </section>
           <section>
             <h3>Using arrays</h3>
-            <p>Once you have an array, you use a key to call a value.</p>
+            <p>Once you have an array, you use a key or index to call a value.</p>
 <pre><code class="php">$kittenColors = array(
   'Fluffy' => 'tabby',
   'Midnight' => 'black',
   'Admiral Snuggles' => 'white'
 );
+//associative array, so call the corresponding key
 echo $kittenColors['Midnight']; //prints 'black'
 </code></pre>
           </section>
@@ -408,20 +437,8 @@ unset($kittenColors['Midnight']);
 </code></pre>
           </section>
           <section>
-            <h3>Arrays without keys</h3>
-            <p>If you don't specify a key, PHP will just automatically assign integers as keys, starting with zero.</p>
-<pre><code class="php">$fruits = array("apple", "orange", "banana", "kiwi");
-var_dump($fruits); //shows whole array
-echo $fruits[1]; //will print orange
-
-//You can add with no key as well
-$fruits[] = 'mango';
-var_dump($fruits);
-</code></pre>
-          </section>
-          <section>
             <h3>Let's Develop It</h3>
-            <p>Create an array of your friends and their favorite foods. Echo a few values onto your screen.</p>
+            <p>Create an associative array of your friends and their favorite foods. Echo a few values onto your screen.</p>
           </section>
         </section>
 
@@ -443,7 +460,7 @@ foreach ($numberList as $value) {
           </section>
           <section>
             <h3>Arrays with keys</h3>
-            <p>You can also use the key values in your foreach loop.</p>
+            <p>You can also use the key values from associative arrays in your foreach loop.</p>
 <pre><code class="php">$kittenColors = array(
   'Fluffy' =&gt; 'tabby',
   'Midnight' =&gt; 'black',
