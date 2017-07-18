@@ -1,23 +1,22 @@
-<?php 
-	include 'db.inc.php';
-    
-    //Declare our variables
-	$company = mysqli_real_escape_string($link, $_GET['company']); 
-	$type = mysqli_real_escape_string($link, $_GET['type']); 
-	$roast = mysqli_real_escape_string($link, $_GET['roast']);
-	$description = mysqli_real_escape_string($link, $_GET['description']);
-	
-    $sql = "INSERT INTO product SET	
-    companyID_fk=" . $company . ",
-	type='" . $type. "',
-	roast='" . $roast. "',
-	description='" . $description. "'";
-    
-	if (!mysqli_query($link, $sql)){
-		$error = 'Error adding submitted data: ' . mysqli_error($link);
-		echo $error;
-		exit();
-	}
-    
-	header('Location:view-products.php');
-?>
+<?php
+require_once 'utilities.inc.php';
+require_once 'db.inc.php';
+
+$data = [];
+foreach (['company', 'type', 'roast', 'description'] as $item) {
+    if (isset($_GET[$item])) {
+        $data[$item] = escape_string($link, $_GET[$item]);
+    }
+}
+
+$sql = "INSERT INTO product SET	
+    companyID_fk=" . $data['company'] . ",
+	type='" . $data['type'] . "',
+	roast='" . $data['roast'] . "',
+	description='" . $data['description'] . "';";
+
+if (!mysqli_query($link, $sql)) {
+    print_error_and_exit($link, 'Error adding submitted data: ' . mysqli_error($link));
+}
+
+header('Location:view-products.php');
