@@ -60,8 +60,8 @@ include_once 'header.php';
             echo "<td>${tableRow['type']}</td>";
             echo "<td>${tableRow['roast']}</td>";
             echo "<td>${tableRow['description']}</td>";
-            echo '<td><a href="edit-products.php?productID=' . $tableRow['productID'] . '">Edit</a></td>';
-            echo '<td><a href="delete-products.php?productID=' . $tableRow['productID'] . '">Delete</a></td>';
+            echo '<td><a href="edit-product.php?productID=' . $tableRow['productID'] . '">Edit</a></td>';
+            echo '<td><a href="delete-product.php?productID=' . $tableRow['productID'] . '">Delete</a></td>';
             echo '</tr>';
         }
         ?>
