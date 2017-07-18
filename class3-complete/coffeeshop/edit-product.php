@@ -31,8 +31,8 @@ $description = clean_string($record['description']);
 
 include 'header.php';
 ?>
-    <form action="product_edit_result.php" method="get">
-        <?php include 'company_select.inc.php'; ?>
+    <form action="update-product.php" method="get">
+        <?php include 'select_company.inc.php'; ?>
         <br>
         Type: <input type="text" name="type" value="<?php echo $type //Sets current value as default?>"/><br/>
         Roast:

@@ -1,8 +1,8 @@
 <?php
 include_once 'header.php';
 ?>
-    <form action="product_insert_result.php" method="get">
-        <?php include 'company_select.inc.php' ?>
+    <form action="create-product.php" method="get">
+        <?php include 'select_company.inc.php' ?>
         <br/>
         Type: <input type="text" name="type"/><br/>
         Roast:

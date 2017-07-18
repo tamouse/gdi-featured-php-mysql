@@ -9,7 +9,7 @@
     $productID = htmlspecialchars($_GET["productID"]);
 	//EXERCISE: Create a variable called $sql and write the SQL statement
     //Don't forget the where!
-    //If you are stuck, try combine the statements from add-products.php and delete-products.php
+    //If you are stuck, try combine the statements from add-product.php and delete-products.php
 	$result = mysqli_query($link, $sql);
 	if (!$result) { 	
 			$error = 'Error: ' . mysqli_error($link);	
@@ -24,7 +24,7 @@
 	$roast = htmlspecialchars($recording['roast'], ENT_QUOTES, 'UTF-8');
 	$description = htmlspecialchars($recording['description'], ENT_QUOTES, 'UTF-8');
 ?>
-<form action="product_edit_result.php" method="get">
+<form action="update-product.php" method="get">
     Company: <select name="company">
 <?php
     //This is the same code from the add-products form; it gets the data for the dropdown.

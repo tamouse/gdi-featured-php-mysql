@@ -4,7 +4,7 @@
     <ul>
         <li><a href="index.php">Home</a></li>
         <li><a href="view-products.php">View/edit our products</a></li>
-        <li><a href="add-products.php">Add a new product</a></li>
+        <li><a href="add-product.php">Add a new product</a></li>
     </ul>
     <h3>Coffee Gallery</h3>
     <img src="images/coffeemonkey.jpg" />
